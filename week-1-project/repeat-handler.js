@@ -25,7 +25,7 @@ function repeatHandler() {
 
 
   // pass user input through core logic (write this! it doesn't work)
-  const repeated = `repeat ${strToRepeat} ${numOfRepetitions} times`;
+  const repeated = strToRepeat.repeat(numOfRepetitions);
 
   // report result to user (this works, no need to change it!)
   const outputField = document.getElementById('repeat-output');

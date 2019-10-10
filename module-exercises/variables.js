@@ -30,7 +30,7 @@ function example_declarationAndAssignment() {
 
   // variables declared with 'let' can have their values reassigned later on
   declaredLetWithoutAssignment = 'new value';
-  declaredLetWithAssignment = 'another new value';
+  // declaredLetWithAssignment = 'another new value';
 
 
   // const variables cannot be declared without an assignment
@@ -82,7 +82,10 @@ function threeVariableSwap1() {
   let temp = '';
 
   // can be done in 4 lines
-
+  temp=a;
+  a=b;
+  b=c;
+  c=temp;
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
@@ -96,7 +99,10 @@ function threeVariableSwap2() {
   let temp = '';
 
   // can be done in 4 lines
-
+  temp=b;
+  b=a;
+  a=c;
+  c=temp;
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
@@ -110,7 +116,11 @@ function fourVariableSwap1() {
   let temp = '';
 
   // can be done in 5 lines
-
+  temp=a;
+  a=b;
+  b=c;
+  c=d;
+  d=temp;
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
