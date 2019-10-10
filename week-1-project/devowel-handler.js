@@ -17,7 +17,7 @@ function devowelHandler() {
   const toDevowel = document.getElementById('devowel-input').value;
 
   // pass user input through core logic (write this! it doesn't work)
-  const devoweled = toDevowel.replace (/[auieo]/g, '');
+  const devoweled = toDevowel.replace (/[auieoAUIEO]/g, '');
 
   // report result to user (this works, no need to change it!)
   const outputField = document.getElementById('devowel-output');
