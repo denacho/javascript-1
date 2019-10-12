@@ -135,6 +135,12 @@ function fourVariableSwap2() {
   let temp = '';
 
   // can be done in 6 lines
+  temp=a;
+  a=d;
+  temp2=b;
+  b=c;
+  c=temp2;
+  d=temp;
 
 
   console.assert(a === "w", "a should store 'w'");
@@ -150,7 +156,12 @@ function fiveVariableSwap() {
   let temp = ' ';
 
   // can be done in 6 lines
-
+  temp=a;
+  a=e;
+  temp2=b;
+  b=d;
+  d=temp2;
+  e=temp;
 
   console.assert(a === "v", "a should store 'v'");
   console.assert(b === "w", "b should store 'w'");
@@ -199,7 +210,7 @@ function multipleAssignments1() {
   let temp = '';
 
   // can be done in 1 line
-
+  temp = a, a = b, b = c, c = temp;
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
@@ -213,7 +224,7 @@ function multipleAssignments2() {
   let temp = '';
 
   // can be done in 1 line
-
+  temp = a, a = c, b = temp, c = 'c';
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
