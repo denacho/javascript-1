@@ -238,7 +238,7 @@ function multipleAssignments3() {
   let temp = '';
 
   // can be done in 1 line
-
+  temp = a, a = b, b = c, c = d, d= temp;
 
   console.assert(a === "a", "a should store 'a'");
   console.assert(b === "b", "b should store 'b'");
