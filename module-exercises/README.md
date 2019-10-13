@@ -1,3 +1,7 @@
+### Please click [JavaScript 1!](https://denacho.github.io/javascript-1/module-exercises/) week-1 project.
+
+
+
 ## Module Exercises
 
 
