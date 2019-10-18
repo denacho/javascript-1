@@ -1,0 +1,194 @@
+body {
+    background-color: #d89279;
+    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+     width: 100%;
+     text-align: center;
+}
+
+#header {
+    background:#cdd3c2;
+    text-align: center;
+    padding: 2%;
+    color: white;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+}
+/* repeatChars-container */
+#repeatChars-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    border-radius: 2%;
+    color: #ffffff;
+    width: 100%;
+    margin: auto;
+    
+}
+#repeatChars-input {
+    width: 100%;
+    text-align: center;
+}
+#repeatChars-button {
+    width: 100%;
+    border-bottom: #eee3dd;
+    text-align: center;
+    border:#d89279;
+}
+#repeatChars-output{
+    width: 200px;
+    text-align: center;
+    background: #cdd3c2;
+}
+/* repeatChars-input */
+#repeatChars-input {
+    width: 200px;
+    border:#d89279;
+    text-align: center;
+    display: flex;
+}
+#repeatChars-button {
+    width: 200px;
+    border: #d89279;
+    text-align: center;
+}
+/* constantize-container */
+#constantize-container {
+    background-color:#d89279;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2%;
+    border-radius: 2%;
+    color: #ffffff;
+    width: 100%;
+    margin: auto;
+    border: 2px solid black;
+}
+/* repeatChars-container */
+#repeatChars-container{
+    background-color: #d89279;
+    display: flex;
+    flex-direction: column;
+    text-align;: center;
+    padding: 2%;
+    border-radius: 2%;
+    color: #ffffff;
+    width: 100%;
+    margin: auto;
+    border: 2px solid blue;
+}
+#constantize-input {
+    width: 200px;
+    align-self: center;
+    border:#d89279;
+    text-align: center;
+}
+#constantize-button {
+    width: 200px;
+    border:#d89279 2px solid;
+    align-self: center;
+}
+#caesarize-container{
+    background-color: #d89279;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+    border: 2px solid #d89279;
+    color: #ffffff;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+#caesarize-string-input{
+    width: 200px;
+    align-self: center;
+    border:#d89279;
+    text-align: center;
+}
+#caesarize-string-input{
+    float: left;
+    width: 400px;
+    text-align: center;
+    margin-right: 10px;
+    border:#d89279;
+    height: 150px;
+    margin: auto;
+    
+    
+}
+#caesarize-number-input{
+    width: 200px;
+    text-align: center;
+    border:#d89279;
+}
+#caesarize-button{
+    width: 200px;
+    align-self: center;
+    border:#d89279;
+    text-align: center;
+}
+#caesarize-output{
+    background: brown;
+    width: 200px;
+    text-align: center;
+}
+#leftpad-container{
+    align-content: center;
+    width: 300px;
+    margin: auto;
+}
+#leftpad-str-input{
+    width: 300px;
+    text-align: center;
+    
+}
+#leftpad-len-input{
+    width: 300px;
+    text-align: center;
+    
+}
+#leftpad-pad-input{
+    width: 300px;
+    text-align: center;
+    
+}
+#leftpad-button{
+    width: 300px;
+    text-align: center;
+    border: 2px solid#d89279;
+}
+#repeat-paragraph{
+     background: rgb(219, 243, 5);
+     color: black;
+}
+#constantize-paragraph{
+    background: rgb(219, 243, 5);
+    margin: auto;
+     color: black;
+}
+#caesarize-paragraph{
+    background: rgb(219, 243, 5);
+     color: black;
+}
+#leftpad-container{
+    background: brown;
+    width: 300px;
+    text-align: center;
+}
+#leftpad-paragraph{
+    background: rgb(219, 243, 5);
+     color: black;
+}
+#footer{
+    text-align: center;
+    background: #cdd3c2 ;
+    color: wheat;
+    text-align: center;
+    padding: 2%;
+    width: 100%;
+    margin: 10px auto;
+}
