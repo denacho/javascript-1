@@ -11,13 +11,32 @@ const repeatCharsTests = [
   { name: 'first', args: ['abc'], expected: 'aabbcc' },
   { name: 'second', args: ['123'], expected: '111222333' },
   { name: 'third', args: ['%-*>'], expected: '%%%%----****>>>>' },
-  { name: 'fourth', args: ['h3LL0 W@r!|)'], expected: 'hh333LLLL000 WW@@@@rr!!!!||||))))' },
+  { name: 'fourth', args: ['h3LL0 W@r!|)'], expected: 'hh333LLLL000    WW@@@@rr!!!!||||))))' },
   { name: 'fifth', args: ['{:-<*>-:}'], expected: '{{{{::::----<<<<****>>>>----::::}}}}' },
   { name: 'sixth', args: [''], expected: '' },
   { name: 'seventh', args: [' '], expected: '    ' },
 ];
 function repeatChars(str) {
   // write this!
+  let finalString = '';
+  const splittedInput = str.split('');
+
+  splittedInput.forEach(character => {
+    if (/[0-9]/.test(character)) {
+      // is a number 
+      finalString = finalString + character + character + character;
+    } else {
+      if (/[a-zA-Z]/.test(character)) {
+       // is a character 
+       finalString = finalString + character + character;
+      } else {
+       // is anything else
+       finalString = finalString + character + character + character + character ;
+      }
+    }
+  });
+
+ return finalString;
 }
 evaluate(repeatChars, repeatCharsTests);
 
