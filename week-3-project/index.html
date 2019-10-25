@@ -1,53 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8">
+    <title>week 3 project</title>
+    <meta name="description" content="week 3 project" />
 
-  <title>week 3 project</title>
-  <meta name="description" content="week 3 project">
+    <script src="../evaluate.js"></script>
 
-  <script src="../evaluate.js"></script>
+    <script src="logic/caesarize.js"></script>
+    <script src="logic/chunk.js"></script>
+    <script src="logic/backward-sentence.js"></script>
+    <script src="logic/sort-words.js"></script>
+    <script src="logic/scramble.js"></script>
+  </head>
 
-  <script src="logic/caesarize.js"></script>
-  <script src="logic/chunk.js"></script>
-  <script src="logic/backward-sentence.js"></script>
-  <script src="logic/sort-words.js"></script>
-  <script src="logic/scramble.js"></script>
-</head>
+  <body>
+    <div id="caesaring-container">
+      <textarea id="unencrypted-string-input" rows="15" cols="30"></textarea>
+      <br />
+      <input id="encryption-key-input" placeholder="encryption key (number)" />
+      <br />
+      <button id="encrypt-button">encrypt it</button> <br />
+      <pre id="encrypted-string-output"></pre>
+      <input id="decryption-key-input" placeholder="decryption key (number)" />
+      <br />
+      <button id="decrypt-button">decrypt it</button> <br />
+      <pre id="decrypted-string-output"></pre>
+    </div>
 
-<body>
+    <!-- hr's are naughty, remove this when you begin styling the page -->
+    <hr />
 
+    <div id="scramble-container">
+      <textarea id="scramble-input" rows="15" cols="30"></textarea> <br />
+      <button id="scramble-button">scramble it</button> <br />
+      <pre id="scramble-output"></pre>
+    </div>
 
-  <div id='caesaring-container'>
-    <textarea id='unencrypted-string-input' rows="15" cols="30"></textarea> <br>
-    <input id='encryption-key-input' placeholder='encryption key (number)' /> <br>
-    <button id='encrypt-button'>encrypt it</button> <br>
-    <pre id='encrypted-string-output'></pre>
-    <input id='decryption-key-input' placeholder='decryption key (number)' /> <br>
-    <button id='decrypt-button'>decrypt it</button> <br>
-    <pre id='decrypted-string-output'></pre>
-  </div>
-
-
-  <!-- hr's are naughty, remove this when you begin styling the page -->
-  <hr>
-
-
-  <div id='scramble-container'>
-    <textarea id='scramble-input' rows="15" cols="30"></textarea> <br>
-    <button id='scramble-button'>scramble it</button> <br>
-    <pre id='scramble-output'></pre>
-  </div>
-
-
-  <script src="handlers/encrypt.js"></script>
-  <script src="handlers/decrypt.js"></script>
-  <script src="handlers/scramble.js"></script>
-
-
-
-</body>
-
+    <script src="handlers/encrypt.js"></script>
+    <script src="handlers/decrypt.js"></script>
+    <script src="handlers/scramble.js"></script>
+  </body>
 </html>

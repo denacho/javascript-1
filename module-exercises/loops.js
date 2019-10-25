@@ -2,7 +2,7 @@
 // https://github.com/colevandersWands/loop-refactors
 
 {
-  const pageTitle = 'loops';
+  const pageTitle = "loops";
   const header = document.createElement("h2");
   header.innerHTML = pageTitle;
   document.body.appendChild(header);
@@ -10,25 +10,24 @@
 }
 
 function example_whileLoops() {
-
   // understanding the while loop will help to understand for loops
   // for loops do the same steps in the same order as this while loop
   // the biggest difference between for loops and while loops is scope
 
   let i = 0; // declare the stepper variable
-  while (i < 4) { // check the condition
+  while (i < 4) {
+    // check the condition
     console.log(i);
     i++; // increment the stepper
   }
-
 }
 evaluate(example_whileLoops);
 
 function example_forVsWhile() {
-
   // a while loop, for comparison
   let i = 0; // declare the stepper variable
-  while (i < 4) { // check the condition
+  while (i < 4) {
+    // check the condition
     console.log(i);
     i++; // increment the stepper
   }
@@ -40,7 +39,8 @@ function example_forVsWhile() {
   // remember how "statements" take one step of execution?
   // for loops put two statements on one line of code
 
-  for (let i = 0; i < 4; i++) { // declare & check, check & increment
+  for (let i = 0; i < 4; i++) {
+    // declare & check, check & increment
     console.log(i);
   }
 
@@ -49,18 +49,13 @@ function example_forVsWhile() {
   // this is useful in more advanced scenarios,
   // but at this point you can just know that it happens
   // you can just ignore the "i" that never changes
-
 }
 evaluate(example_forVsWhile);
 
-
-
 function example_blockScopeInLoops() {
-
   // the body of loops create a block scope
   // variables declared inside of them are redeclared with each loop
   // to get values out of a loop, you must modify an external variable
-
 
   let whileResult = 0;
   let i = 0;
@@ -76,11 +71,12 @@ function example_blockScopeInLoops() {
     forResult += forBodyVariable;
   }
 
-  console.assert(forResult === whileResult, 'both loops should behave the same');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should behave the same"
+  );
 }
 evaluate(example_blockScopeInLoops);
-
 
 /* loop refactors
   refactoring is when you rewrite code to have the same behavior, but different implementation
@@ -95,9 +91,7 @@ evaluate(example_blockScopeInLoops);
   once you understand this, you can refactor any loop no matter how complicated the logic
 */
 
-
 function loopRefactor1() {
-
   let whileResult = 0;
   let i = 0;
   while (i !== 8) {
@@ -111,15 +105,14 @@ function loopRefactor1() {
     forResult += i;
   }
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor1);
 
-
-
 function loopRefactor2() {
-
   let forResult = 0;
   for (i = 5; i > -2; i--) {
     forResult = forResult + i;
@@ -133,14 +126,14 @@ function loopRefactor2() {
     null;
   }
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor2);
 
-
 function loopRefactor1() {
-
   let whileResult = 0;
   let i = 0;
   while (i !== 8) {
@@ -154,50 +147,50 @@ function loopRefactor1() {
     forResult += i;
   }
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor1);
 
-
 function loopRefactor3() {
-
-  let whileResult = .5;
+  let whileResult = 0.5;
   let x = 9;
   while (x > 2) {
     whileResult *= x;
     x--;
-  };
+  }
 
   // refactor the while loop into a for loop
   let forResult = null;
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor3);
 
-
 function loopRefactor4() {
-
   let whileResult = true;
   let x = -1;
   while (x < 2) {
     whileResult = whileResult && Boolean(x);
     x++;
-  };
+  }
 
   // refactor the while loop into a for loop
   let forResult = null;
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor4);
 
-
 function loopRefactor5() {
-
   let forResult = 0;
   for (let i = -3; i === 10 || i < 20; i *= -1.5) {
     forResult = i;
@@ -206,28 +199,28 @@ function loopRefactor5() {
   // refactor the for loop into a while loop
   let whileResult = 0;
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor5);
 
-
-
 function loopRefactor6() {
-
   let forResult = 0;
-  for (let i = 0, j = 10; i !== j; i++ , j--) {
+  for (let i = 0, j = 10; i !== j; i++, j--) {
     forResult = i;
   }
 
   // refactor the for loop into a while loop
   let whileResult = 0;
 
-  console.assert(forResult === whileResult, 'both loops should have the same behavior');
-
+  console.assert(
+    forResult === whileResult,
+    "both loops should have the same behavior"
+  );
 }
 evaluate(loopRefactor6);
-
 
 /* pass tests!
 
@@ -236,11 +229,8 @@ evaluate(loopRefactor6);
 
 */
 
-
 // replace the null's to pass these tests
-const loopTests1 = [
-  { name: 'first', args: [], expected: [0, 4, 16, 56] },
-];
+const loopTests1 = [{ name: "first", args: [], expected: [0, 4, 16, 56] }];
 
 function while1() {
   const result = [];
@@ -262,15 +252,14 @@ function for1() {
 }
 evaluate(for1, loopTests1);
 
-
 // replace the null's to pass these tests
 const loopTests2 = [
-  { name: 'first', args: [0], expected: [0] },
-  { name: 'second', args: [1], expected: [1, 2] },
-  { name: 'third', args: [2], expected: [2, 3, 4] },
-  { name: 'fourth', args: [3], expected: [3, 4, 5, 6] },
-  { name: 'fifth', args: [4], expected: [4, 5, 6, 7, 8] },
-  { name: 'sixth', args: [5], expected: [5, 6, 7, 8, 9, 10] },
+  { name: "first", args: [0], expected: [0] },
+  { name: "second", args: [1], expected: [1, 2] },
+  { name: "third", args: [2], expected: [2, 3, 4] },
+  { name: "fourth", args: [3], expected: [3, 4, 5, 6] },
+  { name: "fifth", args: [4], expected: [4, 5, 6, 7, 8] },
+  { name: "sixth", args: [5], expected: [5, 6, 7, 8, 9, 10] }
 ];
 
 function while2(input) {
@@ -293,15 +282,14 @@ function for2(input) {
 }
 evaluate(for2, loopTests2);
 
-
 // replace the null's to pass these tests
 const loopTests3 = [
-  { name: 'first', args: [0], expected: [] },
-  { name: 'second', args: [1], expected: [3] },
-  { name: 'third', args: [2], expected: [6, 4] },
-  { name: 'fourth', args: [3], expected: [9, 7, 5] },
-  { name: 'fifth', args: [4], expected: [12, 10, 8, 6,] },
-  { name: 'sixth', args: [5], expected: [15, 13, 11, 9, 7] },
+  { name: "first", args: [0], expected: [] },
+  { name: "second", args: [1], expected: [3] },
+  { name: "third", args: [2], expected: [6, 4] },
+  { name: "fourth", args: [3], expected: [9, 7, 5] },
+  { name: "fifth", args: [4], expected: [12, 10, 8, 6] },
+  { name: "sixth", args: [5], expected: [15, 13, 11, 9, 7] }
 ];
 
 function while3(input) {
@@ -324,15 +312,14 @@ function for3(input) {
 }
 evaluate(for3, loopTests3);
 
-
 // write expected values to pass the functions
 const loopTests4 = [
-  { name: 'first', args: [0], expected: null },
-  { name: 'second', args: [1], expected: null },
-  { name: 'third', args: [2], expected: null },
-  { name: 'fourth', args: [3], expected: null },
-  { name: 'fifth', args: [4], expected: null },
-  { name: 'sixth', args: [5], expected: null },
+  { name: "first", args: [0], expected: null },
+  { name: "second", args: [1], expected: null },
+  { name: "third", args: [2], expected: null },
+  { name: "fourth", args: [3], expected: null },
+  { name: "fifth", args: [4], expected: null },
+  { name: "sixth", args: [5], expected: null }
 ];
 
 function while4(input) {
@@ -357,16 +344,14 @@ function for4(input) {
 for4.quizzing = true;
 evaluate(for4, loopTests4);
 
-
-
 // write expected values to pass the functions
 const loopTests5 = [
-  { name: 'first', args: [0], expected: null },
-  { name: 'second', args: [1], expected: null },
-  { name: 'third', args: [2], expected: null },
-  { name: 'fourth', args: [3], expected: null },
-  { name: 'fifth', args: [4], expected: null },
-  { name: 'sixth', args: [5], expected: null },
+  { name: "first", args: [0], expected: null },
+  { name: "second", args: [1], expected: null },
+  { name: "third", args: [2], expected: null },
+  { name: "fourth", args: [3], expected: null },
+  { name: "fifth", args: [4], expected: null },
+  { name: "sixth", args: [5], expected: null }
 ];
 
 function while5(input) {
@@ -391,12 +376,9 @@ function for5(input) {
 for5.quizzing = true;
 evaluate(for5, loopTests5);
 
-
-
 // footnotes
 
 function footnote_incrementingOperators() {
-
   // the ++ and -- operators are often used in loops
   // but their behavior can be a bit tricky to understand
   // these operators will do two things:
@@ -428,13 +410,10 @@ function footnote_incrementingOperators() {
 
   let z = 1;
   z = --z;
-
 }
 evaluate(footnote_incrementingOperators);
 
-
 function footnote_doWhileLoops() {
-
   // know that these exist, but don't worry about them for now
   // there won't be any exercises about them
 
@@ -446,11 +425,9 @@ function footnote_doWhileLoops() {
 }
 evaluate(footnote_doWhileLoops);
 
-
 {
   console.groupEnd();
-  document.body.appendChild(document.createElement('hr'));
+  document.body.appendChild(document.createElement("hr"));
 }
-
 
 // https://github.com/colevandersWands/loop-refactors

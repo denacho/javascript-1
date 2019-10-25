@@ -26,7 +26,7 @@ const thirdArg = `softly grows the grasses.
 it's really hard to say`;
 const thirdExpected = [
   'softly grows the grasses',
-  '\n\t',
+  '.\n\t',
   ' under ',
   '--',
   ' trees',
@@ -44,5 +44,12 @@ const chunkTests = [
 ];
 function chunk(str) {
   // write me!
+
+  let str = "const x = null;";
+
+var all_punc =` !"#$%&'()*+,-./:;<=>?@[]^_'{|}~;`;
+ let punctuations = all_punc.split("");
+ 
+ for(let i = 0; i < str.length; i++){
 }
 evaluate(chunk, chunkTests);
